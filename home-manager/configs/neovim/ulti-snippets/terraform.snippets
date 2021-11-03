@@ -1,0 +1,28 @@
+# Snippets for Terraform
+
+snippet /^mod/ "module declaration" r
+module "${1:name}" {
+  ${0:${VISUAL}}
+}
+endsnippet
+
+snippet /^res/ "resource declaration" r
+resource "${1:type}" "${2:name}" {
+  ${0:${VISUAL}}
+}
+endsnippet
+
+snippet /^dat/ "data declaration" r
+data "${1:type}" "${2:name}" {
+  ${0:${VISUAL}}
+}
+endsnippet
+
+
+snippet /^var/ "variable declaration" r
+variable "${1:name}" {
+  description = "${2:description}"
+  default     = "${3:default}"
+  type        = "${4:type}"
+}
+endsnippet

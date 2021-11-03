@@ -1,0 +1,17 @@
+# Snippets for Go
+
+snippet /^tes/ "Test Function declaration" r
+func ${1:name}(t *testing.T) {
+	cases := struct{
+		${0:${VISUAL}}
+	}{
+		{},
+	}
+
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+
+		})
+	}
+}
+endsnippet
